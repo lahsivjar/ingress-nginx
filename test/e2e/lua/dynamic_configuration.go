@@ -154,7 +154,7 @@ func ensureIngress(f *framework.Framework, host string) *extensions.Ingress {
 	err = f.WaitForNginxServer(host,
 		func(server string) bool {
 			return strings.Contains(server, fmt.Sprintf("server_name %s ;", host)) &&
-				strings.Contains(server, "proxy_pass http://upstream_balancer;")
+				strings.Contains(server, "proxy_pass http://upstream-balancer;")
 		})
 	time.Sleep(waitForLuaSync)
 	ensureRequest(f, host)

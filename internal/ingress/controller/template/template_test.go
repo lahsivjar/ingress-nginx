@@ -77,7 +77,7 @@ var (
 			"/",
 			"/",
 			"/",
-			"proxy_pass https://upstream_balancer;",
+			"proxy_pass https://upstream-balancer;",
 			false,
 			"",
 			false,
@@ -88,7 +88,7 @@ var (
 			"/",
 			"/",
 			"/",
-			"proxy_pass https://upstream_balancer;",
+			"proxy_pass https://upstream-balancer;",
 			false,
 			"",
 			true,
@@ -99,7 +99,7 @@ var (
 			"/",
 			"/",
 			"/",
-			"proxy_pass http://upstream_balancer;",
+			"proxy_pass http://upstream-balancer;",
 			false,
 			"",
 			false,
@@ -289,7 +289,7 @@ proxy_pass http://sticky-upstream-name;
 			`
 rewrite (?i)/(.*) /something/$1 break;
 rewrite (?i)/$ /something/ break;
-proxy_pass http://upstream_balancer;
+proxy_pass http://upstream-balancer;
 `,
 			false,
 			"http",

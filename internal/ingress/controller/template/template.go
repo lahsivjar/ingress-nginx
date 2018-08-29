@@ -428,7 +428,7 @@ func buildProxyPass(host string, b interface{}, loc interface{}, dynamicConfigur
 		proto = "grpc://"
 	}
 
-	upstreamName := "upstream_balancer"
+	upstreamName := "upstream-balancer"
 
 	if !dynamicConfigurationEnabled {
 		upstreamName = location.Backend
